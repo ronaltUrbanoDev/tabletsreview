@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Propagandas</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <img id="slideshow" src="https://via.placeholder.com/1200x800?text=Propaganda+1">
+  </div>
+
+  <script>
+    const imagens = [
+      "https://via.placeholder.com/1200x800?text=Propaganda+1",
+      "https://via.placeholder.com/1200x800?text=Propaganda+2",
+      "https://via.placeholder.com/1200x800?text=Promoção+do+dia"
+    ];
+    let index = 0;
+    const img = document.getElementById("slideshow");
+
+    setInterval(() => {
+      index = (index + 1) % imagens.length;
+      img.src = imagens[index];
+    }, 10000);
+  </script>
+</body>
+</html>
