@@ -25,14 +25,12 @@
 </head>
 <body>
   <div class="slide">
-    <img id="slideshow" src="https://via.placeholder.com/1200x800?text=Propaganda+1">
+    <img id="slideshow" src="https://i.imgur.com/w7mFX2J.png">
   </div>
 
   <script>
     const imagens = [
-      "https://via.placeholder.com/1200x800?text=Propaganda+1",
-      "https://via.placeholder.com/1200x800?text=Propaganda+2",
-      "https://via.placeholder.com/1200x800?text=Promoção+do+dia"
+      "https://i.imgur.com/w7mFX2J.png"
     ];
     let index = 0;
     const img = document.getElementById("slideshow");
@@ -40,7 +38,7 @@
     setInterval(() => {
       index = (index + 1) % imagens.length;
       img.src = imagens[index];
-    }, 10000);
+    }, 10000); // 10 segundos
   </script>
 </body>
 </html>
